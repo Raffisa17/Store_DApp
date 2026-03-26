@@ -77,18 +77,6 @@ We envision a future where store systems are transparent, secure, and fully cont
 - Contract Type: Smart Contract (Soroban)  
 - Language: Rust  
 
-## Example Data Structure
-
-Below is an example representation of how a product is stored:
-
-```json
-{
-  "id": 1029384756,
-  "name": "Mechanical Keyboard",
-  "price": 750000,
-  "stock": 10
-}
-
 ## System Workflow
 
 1. User calls `create_product()` to add a new product  
@@ -221,6 +209,18 @@ To use this smart contract:
    - `get_products()`  
    - `delete_product()`  
 3. Integrate with a frontend application if needed  
+
+## Example Data Structure
+
+Below is an example representation of how a product is stored:
+
+```json
+{
+  "id": 1029384756,
+  "name": "Mechanical Keyboard",
+  "price": 750000,
+  "stock": 10
+}
 
 ## Closing
 
