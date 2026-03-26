@@ -72,7 +72,7 @@ We envision a future where store systems are transparent, secure, and fully cont
 ## Contract Details
 
 - Contract Address:  
-  CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M  
+  CD4BVMNUP7HNNA6IVGAEHPMGI5BJIOA5FR5JB3VJFWFBV27W25GAUVG7
 
 - Contract Type: Smart Contract (Soroban)  
 - Language: Rust  
@@ -90,23 +90,22 @@ Below is an example representation of how a product is stored:
 }
 
 System Workflow
-  User calls create_product() to add a new product
-  Smart contract generates a unique product ID
-  Product data is stored in contract instance storage
-  User calls get_products() to retrieve all products
-  User calls delete_product() to remove a product
-  Storage updates are permanently recorded on-chain
-
+User calls create_product() to add a new product
+Smart contract generates a unique product ID
+Product data is stored in contract instance storage
+User calls get_products() to retrieve all products
+User calls delete_product() to remove a product
+Storage updates are permanently recorded on-chain
 Smart Contract Functions
-  create_product(name, price, stock)
+create_product(name, price, stock)
 
 Creates a new product and stores it on the blockchain.
 
 Parameters:
 
-  name (String): Product name
-  price (u64): Product price
-  stock (u32): Available stock
+name (String): Product name
+price (u64): Product price
+stock (u32): Available stock
 
 Returns:
 
@@ -117,81 +116,80 @@ Retrieves all stored products.
 
 Returns:
 
-  List (Vec) of all products
+List (Vec) of all products
+delete_product(id)
 
-  delete_product(id)
-
-  Deletes a product by its unique ID.
+Deletes a product by its unique ID.
 
 Parameters:
 
-  id (u64): Product ID
+id (u64): Product ID
 
 Returns:
 
-  Confirmation message
-  Future Scope
-  Short-Term Enhancements
-  Product Update
-  Modify product price and stock
-  Stock Validation
-  Prevent negative or invalid stock values
-  Category Management
-  Organize products using categories or tags
-  Search Functionality
-  Filter and search products efficiently
-  Medium-Term Development
-  Transaction System
-  Enable product purchasing
-  Automatically decrease stock
-  Record transaction history
-  User Role Management
-  Introduce admin and buyer roles
-  Implement permission-based actions
-  Notification System
-  Notify users of product updates or purchases
-  Frontend Integration
-  Connect to modern web frameworks like React or Next.js
-  Long-Term Vision
-  Marketplace System
-  Multi-seller decentralized platform
-  Token-Based Payments
-  Integration with blockchain-based payment systems
-  Cross-Chain Integration
-  Expand compatibility across multiple blockchains
-  Decentralized Hosting
-  Deploy frontend on IPFS or similar platforms
-  AI-Based Recommendations
-  Intelligent product suggestions
-  DAO Governance
-  Community-driven development and updates
-  Identity Integration
-  Decentralized identity (DID) system support
-  Enterprise Features
-  Advanced Inventory System
-  Scalable inventory management
-  Audit Logging
-  Immutable tracking of product changes
-  Automated Reporting
-  Generate inventory and sales reports
-  Multi-Language Support
-  Support global users
-  Technical Requirements
-  Rust programming language
-  Soroban SDK
-  Blockchain network (Soroban-compatible)
-  Getting Started
+Confirmation message
+Future Scope
+Short-Term Enhancements
+Product Update
+Modify product price and stock
+Stock Validation
+Prevent negative or invalid stock values
+Category Management
+Organize products using categories or tags
+Search Functionality
+Filter and search products efficiently
+Medium-Term Development
+Transaction System
+Enable product purchasing
+Automatically decrease stock
+Record transaction history
+User Role Management
+Introduce admin and buyer roles
+Implement permission-based actions
+Notification System
+Notify users of product updates or purchases
+Frontend Integration
+Connect to modern web frameworks like React or Next.js
+Long-Term Vision
+Marketplace System
+Multi-seller decentralized platform
+Token-Based Payments
+Integration with blockchain-based payment systems
+Cross-Chain Integration
+Expand compatibility across multiple blockchains
+Decentralized Hosting
+Deploy frontend on IPFS or similar platforms
+AI-Based Recommendations
+Intelligent product suggestions
+DAO Governance
+Community-driven development and updates
+Identity Integration
+Decentralized identity (DID) system support
+Enterprise Features
+Advanced Inventory System
+Scalable inventory management
+Audit Logging
+Immutable tracking of product changes
+Automated Reporting
+Generate inventory and sales reports
+Multi-Language Support
+Support global users
+Technical Requirements
+Rust programming language
+Soroban SDK
+Blockchain network (Soroban-compatible)
+Getting Started
 
 To use this smart contract:
 
 Deploy the contract to a Soroban-compatible blockchain network
-  Interact using the following functions:
-  create_product()
-  get_products()
-  delete_product()
-  Integrate with a frontend application if needed
-
+Interact using the following functions:
+create_product()
+get_products()
+delete_product()
+Integrate with a frontend application if needed
 Closing
+
 Store DApp demonstrates how blockchain technology can be used to build a secure, transparent, and decentralized store management system. By leveraging smart contracts, this application removes dependency on centralized systems and ensures full data ownership for users.
 
 This project can serve as a foundational system for building more advanced decentralized commerce platforms, including marketplaces and blockchain-based inventory systems.
