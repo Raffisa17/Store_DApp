@@ -1,118 +1,90 @@
-# Stellar Notes DApp
+Stellar Store DApp
 
-**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
+Stellar Store DApp - Blockchain-Based Decentralized Store Management System
 
-## Project Description
+Project Description
 
-Stellar Notes DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing personal notes directly on the blockchain. The contract ensures that your data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
+Stellar Store DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing store products directly on the blockchain. The contract ensures that your product data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
 
-The system allows users to create, view, and delete notes, leveraging the efficiency and security of the Stellar network. Each note is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
+The system allows users to create, view, and delete products, leveraging the efficiency and security of the Stellar network. Each product is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
 
-## Project Vision
+Project Vision
 
-Our vision is to revolutionize personal productivity in the digital age by:
+Our vision is to revolutionize simple store management in the digital age by:
 
-- **Decentralizing Data**: Moving note-taking from centralized servers to a global, distributed blockchain
-- **Ensuring Ownership**: Empowering users to have complete control and ownership over their digital thoughts and information
-- **Guaranteeing Immutability**: Providing a permanent, tamper-proof record of notes that cannot be altered or deleted by third parties
-- **Enhancing Privacy**: Leveraging blockchain security to protect personal information from unauthorized access
-- **Building Trustless Systems**: Creating a platform where data integrity is guaranteed by code, not by company promises
+Decentralizing Data: Moving product management from centralized servers to a global, distributed blockchain
+Ensuring Ownership: Empowering users to have complete control and ownership over their product data
+Guaranteeing Immutability: Providing a permanent, tamper-proof record of products that cannot be altered or deleted by unauthorized parties
+Enhancing Security: Leveraging blockchain technology to protect product data from manipulation
+Building Trustless Systems: Creating a platform where data integrity is guaranteed by code, not by company promises
 
-We envision a future where digital information is truly personal and sovereign, empowering individuals with complete autonomy over their digital assets.
+We envision a future where digital store management is transparent, secure, and fully controlled by its users.
 
-## Key Features
+Key Features
+1. Simple Product Creation
+Create products with a single function call
+Specify product name, price, and stock
+Automated ID generation for unique identification
+Persistent storage on the Stellar blockchain
+2. Efficient Data Retrieval
+Fetch all stored products in a single call
+Structured data representation for easy frontend integration
+Quick access to the entire product list
+Real-time synchronization with the blockchain state
+3. Secure Deletion
+Remove specific products using their unique IDs
+Permanent removal from the contract storage
+Clean and efficient storage management
+Immediate update of the product list after deletion
+4. Transparency and Security
+View all product-related activities on the blockchain
+Blockchain-based verification of all storage actions
+Immutable records of product creation and deletion
+Protected against unauthorized modifications
+5. Stellar Network Integration
+Leverages the high speed and low cost of Stellar
+Built using the modern Soroban Smart Contract SDK
+Scalable architecture for growing product data
+Interoperable with other Stellar-based services
+Contract Details
+Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
 
-### 1. **Simple Note Creation**
-
-- Create notes with just one function call
-- Specify title and content for each note
-- Automated ID generation for unique identification
-- Persistent storage on the Stellar blockchain
-
-### 2. **Efficient Data Retrieval**
-
-- Fetch all stored notes in a single call
-- Structured data representation for easy frontend integration
-- Quick access to your entire note collection
-- Real-time synchronization with the blockchain state
-
-### 3. **Secure Deletion**
-
-- Remove specific notes using their unique IDs
-- Permanent removal from the contract storage
-- Clean and efficient storage management
-- Immediate update of the note list after deletion
-
-### 4. **Transparency and Security**
-
-- View all note activities on the blockchain
-- Blockchain-based verification of all storage actions
-- Immutable records of note creation and deletion
-- Protected against unauthorized modifications
-
-### 5. **Stellar Network Integration**
-
-- Leverages the high speed and low cost of Stellar
-- Built using the modern Soroban Smart Contract SDK
-- Scalable architecture for growing note collections
-- Interoperable with other Stellar-based services
-
-## Contract Details
-
-- Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
-  ![alt text](screenshot.png)
-
-## Future Scope
-
-### Short-Term Enhancements
-
-1. **Note Encryption**: Support for end-to-end encryption of note content for enhanced privacy
-2. **Category Management**: Add tags and categories to organize notes efficiently
-3. **Rich Text Support**: Extend support beyond plain text to include Markdown and formatted content
-4. **Search Functionality**: Implement advanced search filters for large note collections
-
-### Medium-Term Development
-
-5. **Collaborative Notes**: Implement multi-signature requirements for shared or collaborative note-taking
-   - Shared access for multiple addresses
-   - Permission-based editing and viewing
-   - Version history tracking
-6. **Notification System**: Off-chain bridge to alert users of new updates or shared notes
-7. **Asset Attachment**: Capability to attach digital assets or tokens to specific notes
-8. **Inter-Contract Integration**: Allow other smart contracts to interact with and store data in the notes contract
-
-### Long-Term Vision
-
-9. **Cross-Chain Synchronization**: Extend note storage to multiple blockchain networks
-10. **Decentralized UI Hosting**: Host the frontend on IPFS or similar decentralized platforms
-11. **AI-Powered Summarization**: Optional integration with AI to help users summarize their notes
-12. **Privacy Layers**: Implement zero-knowledge proofs for completely private note content
-13. **DAO Governance**: Community-driven protocol improvements and feature prioritization
-14. **Identity Management**: Integration with decentralized identity (DID) systems for user management
-
-### Enterprise Features
-
-15. **Corporate Documentation**: Adapt the system for secure corporate record-keeping
-16. **Immutable Logging**: Create time-locked logs for audit purposes
-17. **Automated Reporting**: Automatic note triggers for periodic reporting
-18. **Multi-Language Support**: Expand accessibility with internationalization
-
----
-
-## Technical Requirements
-
-- Soroban SDK
-- Rust programming language
-- Stellar blockchain network
-
-## Getting Started
+Future Scope
+Short-Term Enhancements
+Product Update: Support updating product details such as price and stock
+Category Management: Add categories to organize products efficiently
+Stock Validation: Prevent invalid or negative stock values
+Search Functionality: Implement search filters for managing larger product lists
+Medium-Term Development
+Transaction System: Implement purchase functionality with stock reduction
+Track product purchases
+Record transaction history
+Enable simple order management
+Notification System: Off-chain notifications for product updates or purchases
+Asset Integration: Allow token-based payments for products
+Inter-Contract Integration: Enable interaction with other smart contracts
+Long-Term Vision
+Marketplace Expansion: Support multiple sellers within one platform
+Cross-Chain Integration: Expand product management across multiple blockchains
+Decentralized UI Hosting: Host frontend on IPFS or similar platforms
+AI-Based Recommendations: Suggest products based on user behavior
+DAO Governance: Community-driven feature development and decision making
+Identity Management: Integration with decentralized identity (DID) systems
+Enterprise Features
+Inventory Management System: Advanced product and stock management
+Audit Logging: Maintain immutable logs for product changes
+Automated Reporting: Generate reports based on product and transaction data
+Multi-Language Support: Improve accessibility for global users
+Technical Requirements
+Soroban SDK
+Rust programming language
+Stellar blockchain network
+Getting Started
 
 Deploy the smart contract to Stellar's Soroban network and interact with it using the three main functions:
 
-- `create_note()` - Create a new note with a title and content
-- `get_notes()` - Retrieve all stored notes from the contract
-- `delete_note()` - Remove a specific note by its ID
+create_product() - Create a new product with name, price, and stock
+get_products() - Retrieve all stored products from the contract
+delete_product() - Remove a specific product by its ID
 
----
-
-**Stellar Notes DApp** - Securing Your Thoughts on the Blockchain
+Stellar Store DApp - Decentralizing Simple Store Management on the Blockchain

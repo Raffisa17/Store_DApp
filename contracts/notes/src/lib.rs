@@ -1,48 +1,59 @@
 #![no_std]
 use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Env, String, Symbol, Vec};
 
-// Struktur data yang akan menyimpan notes
+// Struktur data product (barang toko)
 #[contracttype]
 #[derive(Clone, Debug)]
-pub struct Note {
-
+pub struct Product {
+    id: u64,
+    name: String,
+    price: u64,
+    stock: u32,
 }
 
-// Storage key untuk data notes
-// const NOTE_DATA: Symbol = symbol_short!("NOTE_DATA");
+// Storage key
+const PRODUCT_DATA: Symbol = symbol_short!("PRODUCT");
 
 #[contract]
-pub struct NotesContract;
+pub struct StoreContract;
 
 #[contractimpl]
-impl NotesContract {
-    // Fungsi untuk mendapatkan semua notes
-    pub fn get_notes(env: Env) -> Vec<Note> {
-        // 1. ambil data notes dari storage
-        
-        return [];
+impl StoreContract {
+    // Ambil semua produk
+    pub fn get_products(env: Env) -> Vec<Product> {
+        env.storage().instance().get(&PRODUCT_DATA).unwrap_or(Vec::new(&env))
     }
 
-    // Fungsi untuk membuat note baru
-    pub fn create_note(env: Env, title: String, content: String) -> String {
-        // 1. ambil data notes dari storage
-        
-        // 2. Buat object note baru
-        
-        // 3. tambahkan note baru ke notes lama
-        
-        // 4. simpan notes ke storage
-        
-        return String::from_str(&env, "Notes berhasil ditambahkan");
+    // Tambah produk baru
+    pub fn create_product(env: Env, name: String, price: u64, stock: u32) -> String {
+        let mut products: Vec<Product> = env.storage().instance().get(&PRODUCT_DATA).unwrap_or(Vec::new(&env));
+
+        let product = Product {
+            id: env.prng().gen::<u64>(),
+            name: name,
+            price: price,
+            stock: stock,
+        };
+
+        products.push_back(product);
+        env.storage().instance().set(&PRODUCT_DATA, &products);
+
+        String::from_str(&env, "Produk berhasil ditambahkan")
     }
 
-    // Fungsi untuk menghapus notes berdasarkan id
-    pub fn delete_note(env: Env, id: u64) -> String {
-        // 1. ambil data notes dari storage 
+    // Hapus produk berdasarkan id
+    pub fn delete_product(env: Env, id: u64) -> String {
+        let mut products: Vec<Product> = env.storage().instance().get(&PRODUCT_DATA).unwrap_or(Vec::new(&env));
 
-        // 2. cari index note yang akan dihapus menggunakan perulangan
+        for i in 0..products.len() {
+            if products.get(i).unwrap().id == id {
+                products.remove(i);
+                env.storage().instance().set(&PRODUCT_DATA, &products);
+                return String::from_str(&env, "Produk berhasil dihapus");
+            }
+        }
 
-        return String::from_str(&env, "Notes tidak ditemukan")
+        String::from_str(&env, "Produk tidak ditemukan")
     }
 }
 
